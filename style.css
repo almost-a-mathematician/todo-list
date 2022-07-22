@@ -1,0 +1,168 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color:  #f5f5f5;
+    color: #444;
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+    font-family: "Poppins", Comic Sans MS;
+    margin: 0;
+    min-height: 100vh;
+}
+
+h1{/*название*/
+    color: #8ad35a;
+    font-size: 6rem;
+    text-align: center;
+    opacity: 0.4;
+}
+
+form{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    width: 630px;
+}
+
+.input{ /*ввод*/
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    display: block;
+    width: 100%;
+}
+
+.input::placeholder{
+    color: #d5d5d5;
+    font-family: "Poppins", Comic Sans MS;
+}
+
+.todos{
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.todos li{ /*список*/
+    border-top: 1px solid #f5f5f5;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    cursor: pointer;  
+}
+
+.todos li.completed{
+    color: #b6b6b6;
+    text-decoration: line-through;
+}
+
+small{ /*инструкция*/
+    font-family: "Poppins", Comic Sans MS;
+    color: #b5b5b5;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px){
+
+  h1{
+    font-size: 5rem;
+  }
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+.wrapper{ /*размещение сердечка*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    width: 100%;
+    height: 100vh;
+}
+
+.open-popup{ /*это скорее всего будет сердечко*/
+    display: inline-block;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    color: rgb(170, 11, 11);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.popup__bg{ /*затемнение фона при открывании таблички*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+.popup__bg.active{ /*чтобы работала кнопка*/
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+
+.popup{ /*чтобы было само окошко*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: rgb(255, 255, 255);
+    width: 400px;
+    padding: 25px;
+    transition: 0.5s all;
+}
+
+.popup.active{ /*чтобы открывалось при нажатии на кнопку*/
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s all;
+}
+
+.close-popup{ /*размещение крестика*/
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.popup button{ /*тут отправляет*/
+    margin-top: 13px;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(39, 34, 34);
+    font-size: 18px;
+    font-family: 'Comic Sans MS', sans-serif;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.popup button:hover{ /* тут чтобы при наведении цвет кнопки менялся    диплоид*/
+    background: #8ad35a;
+    transition: 0.5s all;
+}
+
+
